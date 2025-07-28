@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TakeAttendanceActivity"
+    android:background="@drawable/bg_gradient"
+    >
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:background="@color/surface"
+        android:padding="16dp"
+        >
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:contentDescription="Back"
+            android:src="?attr/homeAsUpIndicator"
+            app:tint="@color/text_heading" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="Take Attendance"
+            android:textColor="@color/text_heading"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Topic: "
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/text_heading"
+                />
+            <TextView
+                android:id="@+id/topicTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is New topic"
+                android:textColor="@color/text_body"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date: "
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/text_heading"
+                />
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24 Jun 2025"
+                android:textColor="@color/text_body"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hero"
+        android:paddingHorizontal="16dp"
+        >
+        <Button
+            android:id="@+id/allPresentBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Mark All Present"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            />
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            />
+        <Button
+            android:id="@+id/allAbsentBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Mark All Absent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/studentListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btns"
+        android:layout_above="@+id/saveAttBtn"
+        android:padding="16dp"
+        />
+
+    <Button
+        android:id="@+id/saveAttBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary"
+        android:text="Save Attendance"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

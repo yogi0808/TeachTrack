@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".AddStudentActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:background="@color/surface"
+        android:padding="16dp"
+        >
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:contentDescription="Back"
+            android:src="?attr/homeAsUpIndicator"
+            app:tint="@color/text_heading" />
+
+        <TextView
+            android:id="@+id/classTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_heading"
+            android:textSize="24sp"
+            android:text="Add New Student"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student Name"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/text_body"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp"/>
+            <EditText
+                android:id="@+id/sNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Student Name"
+                android:textColorHint="@color/text_placeholder"
+                android:background="@drawable/input_bg"
+                />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student RollNo"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/text_body"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp"/>
+            <EditText
+                android:id="@+id/sRollNoInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Student RollNo"
+                android:textColorHint="@color/text_placeholder"
+                android:background="@drawable/input_bg"
+                />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+</LinearLayout>
