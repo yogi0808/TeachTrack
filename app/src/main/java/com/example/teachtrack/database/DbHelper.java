@@ -5,6 +5,13 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import androidx.core.content.ContextCompat;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
 public class DbHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "teachtrack.db";
     private static final int DATABASE_VERSION = 1;
@@ -32,6 +39,8 @@ public class DbHelper extends SQLiteOpenHelper {
         cursor.close();
         return count;
     }
+
+
 
     @Override
     public void onConfigure(SQLiteDatabase db) {

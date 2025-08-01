@@ -36,6 +36,12 @@
             android:textSize="24sp"
             android:textStyle="bold"
             />
+        <ImageView
+            android:id="@+id/exportCsv"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/more_vert"
+            app:tint="@color/text_heading" />
     </LinearLayout>
 
     <com.google.android.material.tabs.TabLayout
